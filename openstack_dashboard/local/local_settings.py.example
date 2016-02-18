@@ -164,6 +164,11 @@ OPENSTACK_KEYSTONE_DEFAULT_ROLE = "_member_"
 # Enables keystone web single-sign-on if set to True.
 #WEBSSO_ENABLED = False
 
+# If set this URL will be used for web single-sign-on authentication
+# Useful under some network configurations where OPENSTACK_KEYSTONE_URL
+# is not reachable
+#WEBSSO_KEYSTONE_URL = "http://keystone-public.example.com:5000/v3"
+
 # Determines which authentication choice to show as default.
 #WEBSSO_INITIAL_CHOICE = "credentials"
 

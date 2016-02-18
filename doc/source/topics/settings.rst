@@ -951,6 +951,20 @@ make sure that you are using Keystone V3 and Django OpenStack Auth V1.2.0 or
 later.
 
 
+``WEBSSO_KEYSTONE_URL``
+-----------------------
+
+.. versionadded:: 9.0.0(Mitaka)
+
+Default: None
+
+The full auth URL for the Keystone endpoint used for web single-sign-on
+authentication. Use this when OPENSTACK_KEYSTONE_URL is set to an internal
+Keystone endpoint and is not reachable from the external network where the
+identity provider lives. This URL will take precedence over
+OPENSTACK_KEYSTONE_URL if the login choice is an external Identity Provider.
+
+
 ``WEBSSO_INITIAL_CHOICE``
 -------------------------
 

@@ -1,0 +1,9 @@
+---
+features:
+  - Adds a new optional WEBSSO_KEYSTONE_URL property to local_settings.py that
+    will take precedence over OPENSTACK_KEYSTONE_URL for websso authentication
+    with an external identity provider.
+
+fixes:
+  - OPENSTACK_KEYSTONE_URL may not be accessible under some network configurations
+    <https://launchpad.net/bugs/1544703>
