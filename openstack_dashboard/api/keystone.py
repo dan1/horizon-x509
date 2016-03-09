@@ -269,7 +269,12 @@ def get_default_domain(request, get_name=True):
         # if no domain context set, default to user's domain
         domain_id = request.user.user_domain_id
         domain_name = request.user.user_domain_name
-        if get_name:
+
+        federated = False
+        if domain_id:
+            federated = domain_id.upper() == 'FEDERATED'
+
+        if get_name and not federated:
             try:
                 domain = domain_get(request, domain_id)
                 domain_name = domain.name
