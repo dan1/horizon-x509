@@ -181,6 +181,7 @@ OPENSTACK_KEYSTONE_DEFAULT_ROLE = "_member_"
 #    ("saml2", _("Security Assertion Markup Language")),
 #    ("acme_oidc", "ACME - OpenID Connect"),
 #    ("acme_saml2", "ACME - SAML2"),
+#    ("x509", "X.509 Certificate"),
 #)
 
 # A dictionary of specific identity provider and federation protocol
